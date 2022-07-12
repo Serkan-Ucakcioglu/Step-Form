@@ -1,5 +1,4 @@
 <template>
-
   <router-view/>
 </template>
 
@@ -12,27 +11,15 @@
   color: #2c3e50;
 }
 
+//global container form 
 .container {
   max-width: 500px;
   margin: 0px auto;
 }
 
+//global 
 a{
       text-decoration: none;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
 }
 
 

@@ -10,7 +10,12 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/step2',
     name: 'step2',
-    component: () => import(/* webpackChunkName: "about" */ '../views/SecondStep.vue')
+    component: () => import(/* webpackChunkName: "about" */ '@/components/TwoStep.vue')
+  },
+  {
+    path: '/success',
+    name: 'success',
+    component: () => import(/* webpackChunkName: "about" */ '../views/SuccessPage.vue')
   }
 ]
 
