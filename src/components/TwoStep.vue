@@ -1,79 +1,55 @@
 <script setup lang="ts">
-import { useStore } from "../store"
+//import
+import { ref } from "@vue/reactivity";
+import { useStore } from "../store";
 
-const store = useStore()
+const store = useStore();
+
+
+//button disabled
+let isShow = ref(false)
 </script>
 
-
-
 <template>
-   <div class="container">
+  <div class="container">
     <h1>Please You Are Info</h1>
     <form>
       <!-- Email  -->
       <div class="form-control">
         <label><strong>Name</strong></label>
-        <input
-          type="name"
-          placeholder="Name..."
-          required
-        />
+        <input type="name" placeholder="Name..." required />
         <!-- Email  -->
       </div>
 
       <!-- Password  -->
       <div class="form-control">
         <label><strong>Surname</strong></label>
-        <input
-          type="surname"
-          placeholder="Surname..."
-          required
-        />
+        <input type="surname" placeholder="Surname..." required />
       </div>
-        <!-- Age -->
-        <div class="form-control">
+      <!-- Age -->
+      <div class="form-control">
         <label><strong>Age</strong></label>
         <input
-        v-model="store.state.age"
+          v-model="store.state.age"
           type="number"
           placeholder="Age..."
           required
         />
-       
 
-         
         <!-- Password  -->
       </div>
       <nav>
-        <router-link class="btn" to="/">back</router-link>
-      <router-link
-        to="about"
-        class="btn"
-        >Continue</router-link
-      >
+        <router-link class="btn" to="/">Back</router-link>
+        <button class="btn" :disabled="!isShow">Continue</button>
       </nav>
     </form>
   </div>
 </template>
-
-<style lang="scss" >
-
-.form-control{
-    display: flex;
-    flex-direction: column;
-    input{
-        height: 40px;
-        margin-bottom: 10px;
-    }
-    label{
-        text-align: left;
-    }
-}
-
+<style lang="scss" scoped>
 nav{
     display: flex;
-    .btn{
-        margin-left: 5px;
+    a{
+        margin-right: 10px;
     }
 }
 </style>
