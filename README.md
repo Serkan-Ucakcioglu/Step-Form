@@ -10,4 +10,6 @@
 ### To Use useStore 
 ![image](https://user-images.githubusercontent.com/98692987/178612470-84208b63-5a48-4996-ba5c-e75a022b7a75.png)
 
+### Responsive 
+<img width="344" alt="image" src="https://user-images.githubusercontent.com/98692987/178717766-0d8d1764-f81c-4bdb-a030-de3a0462b242.png">
 
