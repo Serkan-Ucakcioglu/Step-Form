@@ -3,7 +3,7 @@
 import { ref } from "@vue/reactivity";
 import { watchEffect } from "@vue/runtime-core";
 import { useRouter } from "vue-router";
-import { useStore } from "../store/"
+import { useStore } from "vuex"
 //import
 const store = useStore();
 const router = useRouter();
@@ -58,7 +58,7 @@ watchEffect(() => {
       <div class="select-control">
         <!-- Select Gender  -->
         <select v-model="store.state.select" name="gender" required>
-          <option value="girl">Girl</option>
+          <option value="girl">Woman</option>
           <option value="man">Man</option>
         </select>
         <!-- Select Gender  -->
